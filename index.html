@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        #box {
+            top: 50vh;
+            left: 50vw;
+            background: linear-gradient(45deg, #FF0000, #0000FF);
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            transform-origin: 0 0;
+            transform: matrix(1, 0, 0, -1, 0, 0);
+            transition-duration: 1s;
+        }
+
+        #controller {
+            position: relative;
+            position: absolute;
+            border-radius: 5px/20px;
+            border-right: solid 3px black;
+            border-left: solid 3px black;
+        }
+
+        .controller_row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .matrix_item {
+            width: 40px;
+            text-align: center;
+            border: none;
+            font-size: 14pt;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position:absolute;top:0;left:0;height:50vh;width:100vw;border-bottom:solid 1px #0000FF;z-index:0;"></div>
+    <div style="position:absolute;top:0;left:0;height:100vh;width:50vw;border-right:solid 1px #FF0000;z-index:0;"></div>
+    <div id="box"></div>
+    <div id="controller">
+        <div class="controller_row">
+            <input type="text" class="matrix_item a" value="1" />
+            <input type="text" class="matrix_item c" value="0" />
+            <input type="text" class="matrix_item e" value="0" />
+        </div>
+        <div class="controller_row">
+            <input type="text" class="matrix_item b" value="0" />
+            <input type="text" class="matrix_item d" value="1" />
+            <input type="text" class="matrix_item f" value="0" />
+        </div>
+        <div class="controller_row">
+            <div class="matrix_item">0</div>
+            <div class="matrix_item">0</div>
+            <div class="matrix_item">1</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
